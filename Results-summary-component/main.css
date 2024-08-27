@@ -1,0 +1,215 @@
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Light-red2: hsla(0, 100%, 67%, 0.092);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow2: hsla(39, 100%, 56%, 0.077);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Green-teal2: hsla(166, 100%, 37%, 0.098);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Cobalt-blue2:rgba(17, 36, 212, 0.09);
+    --Light-slate-blue: hsl(252, 100%, 67%); 
+    --Light-royal-blue: hsl(241, 81%, 54%);  
+    --Violet-blue: hsla(256, 72%, 46%, 1); 
+    --Persian-blue : hsla(241, 72%, 46%, 0); 
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    }
+
+body {
+    font-family: 'Hanken', sans-serif;
+    background-color: var(--White);
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin:20px auto;    
+    background-color: var(--White);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container1 {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    color: var(--White);
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-image:linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding:5px;
+}
+.container1 h4, p {
+    color: var(--Light-lavender);
+}
+.container1 p {
+    font-size:18px;
+    text-align: center;
+}
+.container1 h3 {
+    font-size: 23px;
+    margin:20px 15px 15px;
+}
+.circle h1 {
+    font-size: 48px;
+    margin:0; 
+}
+.circle span {
+    color: var(--Light-lavender);
+    font-size: 12px;
+} 
+
+.container2 {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 32px;
+    border-radius: 8%;
+    box-shadow: 12px 19px 27px -16px var(--Light-lavender);
+}
+
+.container2 h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--Dark-gray-blue);
+}
+.scores {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.scores div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    border-radius: 10px;
+}
+
+.score-icons {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.reaction {
+    background-color: var(--Light-red2);
+}
+.reaction .score-icons span {
+    color:var(--Light-red)
+}
+.memory {
+    background-color: var(--Orangey-yellow2);
+}
+.memory .score-icons span {
+    color:var(--Orangey-yellow);
+}
+.verbal {
+    background-color: var(--Green-teal2);
+}
+.verbal .score-icons span {
+    color:var(--Green-teal);
+}
+.visual {
+    background-color: var(--Cobalt-blue2);
+}
+.visual .score-icons span {
+    color:var(--Cobalt-blue);
+}
+.black-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--Dark-gray-blue);
+}
+.grey {
+    color: rgba(0, 0, 0, 0.24)
+}
+.score-icons span {
+    font-weight: 600;
+}
+.btn {
+    margin-top: 20px;
+    padding:10px;
+    border-radius: 15px;
+    color: var(--White);
+    border:none;
+    cursor: pointer;
+    background-color: var(--Dark-gray-blue);
+    
+}
+.btn:hover {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+@media (max-width:480px) {
+    .card {
+        width:100%;
+        margin-top:-13px;
+        flex-direction: column;
+    }
+    .container1 {
+        padding:10px;
+        width:94%;
+        border-radius:20px;
+    }
+    .circle {
+        width:84px;
+        height:84px;
+        border-radius: 50%;
+        padding:5px;
+        margin:-9px 30px 30px;
+    }
+    .circle h1 {
+        font-size:29px;
+        margin:0;
+    }
+    .circle span {
+        font-size: 9px;
+    }
+    .container1 h3 {
+        font-size:18px;
+        margin:-16px -7px -7px;
+    }
+    .container1 p {
+        font-size: 15px;
+    }
+    .container2 {
+        width:79%;
+        border-radius: 8%;
+        padding:1px 32px 32px;
+    }
+    .container h3 {
+        font-size:18px;
+        margin-bottom:21px;
+    }
+    .scores {
+        gap:8px;
+    }
+    .scores div {
+        padding:8px 6px;
+        border-radius: 10px;
+    }
+}

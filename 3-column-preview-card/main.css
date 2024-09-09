@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+@font-face {
+    font-family: 'lex';
+    src: url("./LexendDeca-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'big';
+    src: url("./BigShouldersDisplay-VariableFont_wght.ttf");
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 1.25rem auto;
+    width: 100%;
+    background-color: var(--Very-light-gray);
+}
+.container {
+    display: grid;
+    place-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    margin: 1.25rem auto;
+    padding: 0.75rem;
+    
+}
+.container h1 {
+    color: var(--Very-light-gray);
+    font-family: 'big';
+    text-transform: uppercase;
+}
+.container p {
+    color: var(--Transparent-white);
+    opacity: 80%;
+    line-height: 1.7;
+    font-family: 'lex';
+    font-size: 0.75rem;
+    margin: -0.9375 auto 3rem -0.125rem
+}
+.sedans,
+.suvs,
+.lux {
+    padding: 1.7rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+.container > div:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.container > div:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sedans {
+    background-color: var(--Bright-orange) ;
+    color: var(--Bright-orange);
+}
+.suvs {
+    background-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+}
+.lux {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan)
+}
+.container button {
+    color: inherit;
+    font-family: 'lex';
+    font-weight: 400;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 20px;
+    width: 7rem;
+    padding: 0.6rem;
+    margin-bottom: 0.625rem;
+    transition: all 0.2s ease-in;
+}
+button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: var(--Transparent-white);
+    background-color: transparent;
+}
+@media (max-width: 1440px) {
+    .container {
+        width: 64%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 53%;
+        padding: 0;
+    }
+    .container > div:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .container > div:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+    .container p {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 376px) {
+    .container {
+        width: 65%;
+    }
+}
+

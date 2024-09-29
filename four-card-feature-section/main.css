@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--poppins-font: "Poppins", sans-serif;
+--poppins-extralight: 200;
+--poppins-regular: 400;
+--poppins-semibold: 600;
+
+}
+
+.poppins-extralight {
+    font-family: var(--poppins-font);
+    font-weight: var(--poppins-extralight);
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: var(--poppins-font);
+    font-weight: var(--poppins-regular);
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: var(--poppins-font);
+    font-weight: var(--poppins-semibold);
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    font-family: var(--poppins-font);
+    width: 100%;
+    min-height: 100vh;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    margin: 5px auto;
+}
+
+.head {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.head .normal {
+    font-weight: var(--poppins-extralight);
+    color: var(--Grayish-Blue);
+}
+
+.head .bold {
+    font-weight: var(--poppins-semibold);
+    color: var(--Very-Dark-Blue);
+}
+
+.head h3 {
+    font-size: 15px;
+}
+
+.head p {
+    margin-top: 15px;
+    margin-bottom: -10px;
+    font-size: 14px;
+    width: 60%;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+
+.section-cont {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    grid-column: 1 / 4; 
+    grid-row: 2 / 3; 
+    gap: 15px;
+}
+
+.section-cont h3 {
+    color: var(--Very-Dark-Blue);
+    font-weight: var(--poppins-semibold);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.section-cont p {
+    color: var(--Grayish-Blue);
+    font-weight: var(--poppins-regular);
+    font-size: 11px;
+}
+
+.supervisor {
+    grid-column: 1/2;
+    background-color: var(--Very-Light-Gray);
+    padding: 20px;
+    width: 550px;
+    height: 165px; 
+    border-radius: 5px;
+    border-top: 4px solid var(--Cyan);
+    box-shadow: -1px 5px 12px -5px var(--Grayish-Blue);
+}
+
+.middle {
+    grid-column: 2/3;    
+}
+
+.middle .team-builder {
+    width: 250px;
+    height: 160px;
+    background-color: var(--Very-Light-Gray);
+    padding: 15px;
+    border-radius: 5px;
+    border-top: 4px solid var(--Red);
+    box-shadow: -1px 5px 12px -5px var(--Grayish-Blue);
+    margin-bottom: 30px;
+}
+
+.middle .karma {
+    width: 250px;
+    height: 160px;
+    background-color: var(--Very-Light-Gray);
+    padding: 15px;
+    border-radius: 5px;
+    border-top: 4px solid var(--Orange);
+    box-shadow: -1px 5px 12px -5px var(--Grayish-Blue);
+}
+
+.calcultor {
+    grid-column: 3/4;
+    background-color: var(--Very-Light-Gray);
+    width: 550px;
+    height: 165px;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 4px solid var(--Blue);
+    box-shadow: -1px 5px 12px -5px var(--Grayish-Blue);
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 20px ;
+}
+
+@media (max-width: 1440px) {
+    .supervisor,
+    .calcultor {
+        width: 293px;
+    }
+}
+
+@media (max-width: 768px) {
+    .supervisor, .calcultor {
+        width: 232px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .supervisor,
+    .calcultor {
+        width: 248px;
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .middle .team-builder {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    .head {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .head p {
+        font-size: 11px;
+    }
+}
+
+
